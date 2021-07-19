@@ -47,6 +47,7 @@ type
     procedure lbl1Click(Sender: TObject);
     procedure lbl5Click(Sender: TObject);
     procedure img7Click(Sender: TObject);
+    procedure lbl2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -59,7 +60,7 @@ var
 implementation
 
 uses
-  U_DMCliente, U_Pacientes, U_Login;
+  U_DMCliente, U_Pacientes, U_Login, U_Agendamento;
 
 {$R *.dfm}
 
@@ -101,6 +102,20 @@ begin
 
 
 end;
+
+procedure Tfrm_principal.lbl2Click(Sender: TObject);
+begin
+     Application.CreateForm(Tfrm_agendamento,frm_agendamento);
+
+    frm_agendamento.Parent := pnl_central ;
+    frm_agendamento.Align:=alClient;
+    frm_agendamento.BorderStyle :=bsNone;
+
+    frm_agendamento.Show;
+
+
+     end;
+
 
 procedure Tfrm_principal.lbl5Click(Sender: TObject);
 begin

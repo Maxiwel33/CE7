@@ -1,6 +1,7 @@
 object frm_principal: Tfrm_principal
   Left = 0
   Top = 0
+  ActiveControl = cal1
   BorderStyle = bsNone
   Caption = 'Clinica de Endocrinologia 7 - '
   ClientHeight = 552
@@ -443,6 +444,7 @@ object frm_principal: Tfrm_principal
       Padding.Left = 10
       ParentBackground = False
       TabOrder = 9
+      OnClick = lbl2Click
       object img6: TImage
         Left = 10
         Top = 0
@@ -497,6 +499,7 @@ object frm_principal: Tfrm_principal
           EA9DBE1F8D7173EC213B6567FF23DE6E59DFFCD57BF53663D3937B124FCF6F3B
           1AA34DCDAA05C58CE3EFB960215F6BE8EB6C3D64FAEE6087CD745572F77F5482
           8BF3D06ACC560000000049454E44AE426082}
+        OnClick = lbl2Click
         ExplicitLeft = 0
       end
       object lbl2: TLabel
@@ -513,6 +516,7 @@ object frm_principal: Tfrm_principal
         Font.Style = []
         ParentFont = False
         Layout = tlCenter
+        OnClick = lbl2Click
       end
     end
   end
