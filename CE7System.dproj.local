@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/01/24 21:17:01.000.112,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/02/28 18:48:17.000.399,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/03/21 21:48:24.000.269,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/03/29 16:46:59.000.912,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/04/12 07:11:25.000.712,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/04/25 21:03:41.000.817,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/05/09 06:40:19.000.672,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2020/05/24 07:38:00.000.447,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/06/28 08:30:05.000.649,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/07/13 16:34:21.000.159,=C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2021/07/13 16:44:13.000.006,C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\CE7\Client\U_principal.pas</Transaction>
+    <Transaction>2021/07/13 16:44:13.000.006,C:\Users\clade\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\CE7\Client\U_principal.dfm</Transaction>
+    <Transaction>2021/07/13 16:44:24.000.757,C:\Users\clade\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\CE7\Client\CE7System.dproj</Transaction>
+    <Transaction>2021/07/18 19:52:26.000.353,=C:\CE7\Client\Unit1.pas</Transaction>
+    <Transaction>2021/07/18 19:56:22.000.089,C:\CE7\Client\Unit1.pas=C:\CE7\Client\U_DMCliente.pas</Transaction>
+    <Transaction>2021/07/18 19:56:22.000.089,C:\CE7\Client\Unit1.dfm=C:\CE7\Client\U_DMCliente.dfm</Transaction>
+    <Transaction>2021/07/18 21:04:25.810,=C:\CE7\Client\Unit1.pas</Transaction>
+    <Transaction>2021/07/18 21:04:42.934,C:\CE7\Client\U_Pacientes.dfm=C:\CE7\Client\Unit1.dfm</Transaction>
+    <Transaction>2021/07/18 21:04:42.934,C:\CE7\Client\U_Pacientes.pas=C:\CE7\Client\Unit1.pas</Transaction>
+    <Transaction>2021/07/18 21:24:50.879,=C:\CE7\Client\Unit1.pas</Transaction>
+    <Transaction>2021/07/18 21:29:53.860,C:\CE7\Client\U_Login.dfm=C:\CE7\Client\Unit1.dfm</Transaction>
+    <Transaction>2021/07/18 21:29:53.860,C:\CE7\Client\U_Login.pas=C:\CE7\Client\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

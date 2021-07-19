@@ -1,0 +1,45 @@
+unit U_Login;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Imaging.pngimage,
+  Vcl.ExtCtrls, Vcl.Buttons;
+
+type
+  Tfrm_login = class(TForm)
+    tmr1: TTimer;
+    img1: TImage;
+    lbl1: TLabel;
+    lbl2: TLabel;
+    edt1: TEdit;
+    edt2: TEdit;
+    btn1: TButton;
+    procedure btn1Click(Sender: TObject);
+    procedure tmr1Timer(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frm_login: Tfrm_login;
+
+implementation
+
+{$R *.dfm}
+
+procedure Tfrm_login.btn1Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure Tfrm_login.tmr1Timer(Sender: TObject);
+begin
+     lbl1.Caption:=TimeToStr(time);
+     lbl2.Caption:=FormatDateTime('dddddd',date);
+end;
+
+end.

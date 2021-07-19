@@ -1,0 +1,134 @@
+unit U_Pacientes;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Data.DB,
+  Vcl.Mask, Vcl.DBCtrls, Vcl.Imaging.pngimage, Vcl.ComCtrls, Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TFrm_pacientes = class(TForm)
+    btn1: TButton;
+    pnl2: TPanel;
+    pnl3: TPanel;
+    pnl4: TPanel;
+    ds1: TDataSource;
+    pnl1: TPanel;
+    pnl5: TPanel;
+    pnl6: TPanel;
+    img1: TImage;
+    pnl7: TPanel;
+    img2: TImage;
+    pnl8: TPanel;
+    img3: TImage;
+    pnl9: TPanel;
+    img4: TImage;
+    pnl10: TPanel;
+    img5: TImage;
+    pnl11: TPanel;
+    img6: TImage;
+    pnl12: TPanel;
+    img7: TImage;
+    pnl13: TPanel;
+    img8: TImage;
+    pgc1: TPageControl;
+    ts_cadastro: TTabSheet;
+    ts_localiza: TTabSheet;
+    lbl1: TLabel;
+    dbedtID_PACIENTE: TDBEdit;
+    lbl2: TLabel;
+    dbedtNOME: TDBEdit;
+    lbl3: TLabel;
+    dbedtENDERECO: TDBEdit;
+    lbl4: TLabel;
+    dbedtNUMERO: TDBEdit;
+    lbl5: TLabel;
+    dbedtCIDADE: TDBEdit;
+    lbl6: TLabel;
+    dbedtUF: TDBEdit;
+    lbl7: TLabel;
+    dbedtBAIRRO: TDBEdit;
+    lbl8: TLabel;
+    dbedtCOMPLEMENTO: TDBEdit;
+    lbl9: TLabel;
+    dbedtDATA_NASC: TDBEdit;
+    lbl10: TLabel;
+    dbedtCPF: TDBEdit;
+    lbl11: TLabel;
+    dbedtRG: TDBEdit;
+    lbl12: TLabel;
+    dbedtEMAIL: TDBEdit;
+    lbl13: TLabel;
+    dbedtCELULAR: TDBEdit;
+    lbl14: TLabel;
+    dbedtCONTATO: TDBEdit;
+    lbl15: TLabel;
+    dbedtTRABALHO: TDBEdit;
+    lbl16: TLabel;
+    dbedtCONJUGE: TDBEdit;
+    pnl14: TPanel;
+    pnl15: TPanel;
+    dbgrd1: TDBGrid;
+    edt_busca: TEdit;
+    lbl17: TLabel;
+    pnl16: TPanel;
+    img9: TImage;
+    procedure btn1Click(Sender: TObject);
+    procedure pnl13Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
+    procedure pnl10Click(Sender: TObject);
+    procedure pnl16Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Frm_pacientes: TFrm_pacientes;
+
+implementation
+
+uses
+  U_DMCliente;
+
+{$R *.dfm}
+
+procedure TFrm_pacientes.btn1Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TFrm_pacientes.FormShow(Sender: TObject);
+begin
+   dm.RDWCSQL_Pacientes.Open;
+end;
+
+procedure TFrm_pacientes.pnl10Click(Sender: TObject);
+begin
+    if pgc1.ActivePage =ts_localiza  then
+    begin
+    pgc1.ActivePage :=ts_cadastro ;
+    end else
+     pgc1.ActivePage :=ts_localiza ;
+end;
+
+procedure TFrm_pacientes.pnl13Click(Sender: TObject);
+begin
+Close;
+end;
+
+procedure TFrm_pacientes.pnl16Click(Sender: TObject);
+begin
+     with dm.RDWCSQL_Pacientes do
+     begin
+       Close;
+       SQL.Clear;
+       sql.Add('select * from paciente where nome = '+QuotedStr(edt_busca.Text+'%'));
+       Open;
+     end;
+end;
+
+end.
