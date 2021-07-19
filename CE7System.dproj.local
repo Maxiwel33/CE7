@@ -21,10 +21,13 @@
     <Transaction>2021/07/18 21:04:42.000.934,C:\CE7\Client\Unit1.pas=C:\CE7\Client\U_Pacientes.pas</Transaction>
     <Transaction>2021/07/18 21:04:42.000.934,C:\CE7\Client\Unit1.dfm=C:\CE7\Client\U_Pacientes.dfm</Transaction>
     <Transaction>2021/07/18 21:24:50.000.879,=C:\CE7\Client\Unit1.pas</Transaction>
-    <Transaction>2021/07/18 21:29:53.000.860,C:\CE7\Client\Unit1.dfm=C:\CE7\Client\U_Login.dfm</Transaction>
     <Transaction>2021/07/18 21:29:53.000.860,C:\CE7\Client\Unit1.pas=C:\CE7\Client\U_Login.pas</Transaction>
+    <Transaction>2021/07/18 21:29:53.000.860,C:\CE7\Client\Unit1.dfm=C:\CE7\Client\U_Login.dfm</Transaction>
     <Transaction>2021/07/19 19:22:09.155,=C:\CE7\Client\Unit1.pas</Transaction>
-    <Transaction>2021/07/19 19:22:53.155,C:\CE7\Client\U_Agendamento.dfm=C:\CE7\Client\Unit1.dfm</Transaction>
     <Transaction>2021/07/19 19:22:53.155,C:\CE7\Client\U_Agendamento.pas=C:\CE7\Client\Unit1.pas</Transaction>
+    <Transaction>2021/07/19 19:22:53.155,C:\CE7\Client\U_Agendamento.dfm=C:\CE7\Client\Unit1.dfm</Transaction>
+    <Transaction>2021/07/19 19:51:34.823,=C:\CE7\Client\Unit1.pas</Transaction>
+    <Transaction>2021/07/19 19:52:29.650,C:\CE7\Client\U_Funcionarios.pas=C:\CE7\Client\Unit1.pas</Transaction>
+    <Transaction>2021/07/19 19:52:29.650,C:\CE7\Client\U_Funcionarios.dfm=C:\CE7\Client\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>
