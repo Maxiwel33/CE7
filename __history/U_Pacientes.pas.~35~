@@ -17,19 +17,19 @@ type
     ds1: TDataSource;
     pnl1: TPanel;
     pnl5: TPanel;
-    pnl6: TPanel;
+    pnl_insere: TPanel;
     img1: TImage;
-    pnl7: TPanel;
+    pnl_altera: TPanel;
     img2: TImage;
-    pnl8: TPanel;
+    pnl_exclui: TPanel;
     img3: TImage;
     pnl9: TPanel;
     img4: TImage;
     pnl10: TPanel;
     img5: TImage;
-    pnl11: TPanel;
+    pnl_cancela: TPanel;
     img6: TImage;
-    pnl12: TPanel;
+    pnl_salva: TPanel;
     img7: TImage;
     pnl13: TPanel;
     img8: TImage;
@@ -75,11 +75,18 @@ type
     lbl17: TLabel;
     pnl16: TPanel;
     img9: TImage;
+    rg1: TRadioGroup;
+    dbtxtNOME: TDBText;
     procedure btn1Click(Sender: TObject);
     procedure pnl13Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure pnl10Click(Sender: TObject);
     procedure pnl16Click(Sender: TObject);
+    procedure pnl_insereClick(Sender: TObject);
+    procedure pnl_alteraClick(Sender: TObject);
+    procedure pnl_excluiClick(Sender: TObject);
+    procedure pnl_cancelaClick(Sender: TObject);
+    procedure pnl_salvaClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -104,6 +111,7 @@ end;
 procedure TFrm_pacientes.FormShow(Sender: TObject);
 begin
    dm.RDWCSQL_Pacientes.Open;
+   pgc1.ActivePage:=ts_cadastro;
 end;
 
 procedure TFrm_pacientes.pnl10Click(Sender: TObject);
@@ -115,6 +123,16 @@ begin
      pgc1.ActivePage :=ts_localiza ;
 end;
 
+procedure TFrm_pacientes.pnl_cancelaClick(Sender: TObject);
+begin
+   dm.RDWCSQL_Pacientes.Cancel;
+end;
+
+procedure TFrm_pacientes.pnl_salvaClick(Sender: TObject);
+begin
+    dm.RDWCSQL_Pacientes.Post;
+end;
+
 procedure TFrm_pacientes.pnl13Click(Sender: TObject);
 begin
 Close;
@@ -124,11 +142,54 @@ procedure TFrm_pacientes.pnl16Click(Sender: TObject);
 begin
      with dm.RDWCSQL_Pacientes do
      begin
+     if rg1.ItemIndex =0  then
+    begin
        Close;
        SQL.Clear;
-       sql.Add('select * from paciente where nome like = '+QuotedStr(edt_busca.Text+'%'));
+       sql.Add('select * from paciente');
        Open;
+     end
+  else
+    begin
+      with dm.RDWCSQL_Pacientes do
+if rg1.ItemIndex =1  then
+    begin
+       Close;
+       SQL.Clear;
+       sql.Add('select * from paciente where nome like '+UpperCase(QuotedStr(edt_busca.Text+'%')));
+       Open;
+   end else
+    begin
+      with dm.RDWCSQL_Pacientes do
+if rg1.ItemIndex =2  then
+    begin
+       Close;
+       SQL.Clear;
+       sql.Add('select * from paciente where cpf like '+UpperCase(QuotedStr(edt_busca.Text+'%')));
+       Open;
+    end;
+    end;
+    end;
      end;
+end;
+
+procedure TFrm_pacientes.pnl_insereClick(Sender: TObject);
+begin
+   DM.RDWCSQL_Pacientes.Insert;
+   dbedtNOME.SetFocus;
+end;
+
+procedure TFrm_pacientes.pnl_alteraClick(Sender: TObject);
+begin
+    dm.RDWCSQL_Pacientes.Edit;
+    dbedtNOME.SetFocus;
+end;
+
+procedure TFrm_pacientes.pnl_excluiClick(Sender: TObject);
+begin
+Application.MessageBox('Deseja realmente apagar o registro corrente?',
+  'Excluir Registro', MB_OKCANCEL + MB_ICONQUESTION);
+  DM.RDWCSQL_Pacientes.Delete;
 end;
 
 end.

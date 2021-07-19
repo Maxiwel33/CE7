@@ -1,9 +1,10 @@
 object Frm_pacientes: TFrm_pacientes
   Left = 0
   Top = -55
+  BorderStyle = bsNone
   Caption = 'Paciente'
-  ClientHeight = 621
-  ClientWidth = 992
+  ClientHeight = 660
+  ClientWidth = 1072
   Color = 14941646
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -26,8 +27,8 @@ object Frm_pacientes: TFrm_pacientes
   end
   object pnl2: TPanel
     Left = 0
-    Top = 576
-    Width = 992
+    Top = 615
+    Width = 1072
     Height = 45
     Align = alBottom
     BevelOuter = bvNone
@@ -39,10 +40,10 @@ object Frm_pacientes: TFrm_pacientes
     ExplicitWidth = 1004
   end
   object pnl3: TPanel
-    Left = 858
+    Left = 938
     Top = 0
     Width = 134
-    Height = 576
+    Height = 615
     Align = alRight
     BevelOuter = bvNone
     Color = 16645595
@@ -55,8 +56,8 @@ object Frm_pacientes: TFrm_pacientes
   object pnl4: TPanel
     Left = 0
     Top = 0
-    Width = 858
-    Height = 576
+    Width = 938
+    Height = 615
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
@@ -66,7 +67,7 @@ object Frm_pacientes: TFrm_pacientes
     object pnl1: TPanel
       Left = 0
       Top = 0
-      Width = 858
+      Width = 938
       Height = 65
       Align = alTop
       BevelOuter = bvNone
@@ -84,10 +85,10 @@ object Frm_pacientes: TFrm_pacientes
       ExplicitWidth = 742
     end
     object pnl5: TPanel
-      Left = 713
+      Left = 793
       Top = 65
       Width = 145
-      Height = 511
+      Height = 550
       Align = alRight
       BevelOuter = bvNone
       Color = 12445367
@@ -115,6 +116,7 @@ object Frm_pacientes: TFrm_pacientes
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = pnl6Click
         object img1: TImage
           Left = 87
           Top = 1
@@ -489,11 +491,13 @@ object Frm_pacientes: TFrm_pacientes
     object pgc1: TPageControl
       Left = 0
       Top = 65
-      Width = 713
-      Height = 511
+      Width = 793
+      Height = 550
       ActivePage = ts_localiza
       Align = alClient
       TabOrder = 2
+      ExplicitWidth = 713
+      ExplicitHeight = 511
       object ts_cadastro: TTabSheet
         Caption = 'cadastro'
         TabVisible = False
@@ -783,8 +787,8 @@ object Frm_pacientes: TFrm_pacientes
         ExplicitHeight = 165
         object pnl14: TPanel
           Left = 0
-          Top = 449
-          Width = 705
+          Top = 488
+          Width = 785
           Height = 52
           Align = alBottom
           BevelOuter = bvNone
@@ -792,32 +796,238 @@ object Frm_pacientes: TFrm_pacientes
           ParentBackground = False
           TabOrder = 0
           ExplicitTop = 0
+          ExplicitWidth = 705
+          object dbtxtNOME: TDBText
+            AlignWithMargins = True
+            Left = 3
+            Top = 3
+            Width = 779
+            Height = 46
+            Align = alClient
+            Alignment = taCenter
+            DataField = 'NOME'
+            DataSource = ds1
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -27
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            ExplicitLeft = 320
+            ExplicitTop = 16
+            ExplicitWidth = 65
+            ExplicitHeight = 17
+          end
         end
         object pnl15: TPanel
           Left = 0
           Top = 0
-          Width = 705
-          Height = 52
+          Width = 785
+          Height = 49
           Align = alTop
           BevelOuter = bvNone
           Color = 16645595
           ParentBackground = False
           TabOrder = 1
-          ExplicitTop = 8
+          ExplicitWidth = 769
+          DesignSize = (
+            785
+            49)
+          object lbl17: TLabel
+            Left = 191
+            Top = 18
+            Width = 37
+            Height = 16
+            Caption = 'Digite:'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+          end
+          object edt_busca: TEdit
+            Left = 240
+            Top = 16
+            Width = 481
+            Height = 24
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clWindowText
+            Font.Height = -13
+            Font.Name = 'Tahoma'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 0
+          end
+          object pnl16: TPanel
+            Left = 666
+            Top = 8
+            Width = 110
+            Height = 36
+            Cursor = crHandPoint
+            Alignment = taLeftJustify
+            Anchors = [akTop, akRight]
+            Caption = '    Buscar'
+            Font.Charset = DEFAULT_CHARSET
+            Font.Color = clDefault
+            Font.Height = -17
+            Font.Name = 'Futura Lt BT'
+            Font.Style = []
+            ParentFont = False
+            TabOrder = 1
+            OnClick = pnl16Click
+            ExplicitLeft = 650
+            object img9: TImage
+              Left = 79
+              Top = 1
+              Width = 30
+              Height = 34
+              Align = alRight
+              Center = True
+              Picture.Data = {
+                0954506E67496D61676589504E470D0A1A0A0000000D49484452000000180000
+                00180806000000E0773DF80000000473424954080808087C0864880000000970
+                48597300000DD700000DD70142289B780000001974455874536F667477617265
+                007777772E696E6B73636170652E6F72679BEE3C1A000003524944415478DAAD
+                964B4C13511486CF9DB633A5D0420B6D8DCF440D222A51484CC716A3D5B8C1B8
+                33465CB8908D24BA71E323C6474C4C8C0B138195BAD254E3CA18134D10AAA505
+                8D2FD0202882F1DDA10F6AD316A6ED5CEF6D99685FB4444E72D373EECC9DEF9C
+                FFBE8A30C690CFEE0E0FB37A5F681D52402392A00E008D2304AFD40A3CC4F37C
+                0C4A34940D703A9D4A49A93E4EDC53A4A9F38C4992119DC9A8E6E4AE5D0D9179
+                01BA9FF66F420C730301DE587420C004969836FBD6CD3D25017ADDEE35182BDE
+                C8599795A9C158531DD4946924965355C4C5F8EF68340682CF678CC5A6E5F158
+                02B0EFB4599C7302CE0130CDAE677D24E289CE603699A64DC66A1621C4E49348
+                98F4457E79055D3A373C9E88963714922B0578DCF7EC1891E532ED5864368A66
+                93912D269120F8C23FBD82365D0774D89B2D470A027AFA063E137F0595A576F5
+                4A523564647EE7C103D8D7D29253C987B171C5AC5C71BF4157B1B7BE5ECC013C
+                F4780CAA24F2D360D9D2C533067D1597FD520100044321FF972FDFABA92F49B8
+                71E756FE750EA0E7A9670746A89B0675B5ABC31CC76A4B05CCCCC4FD231F3EA6
+                0018E1B61D56FE7A0EA0BBCF730861748D060DEBD7C6C9C4AAE48F16321946E4
+                1587DEBD97E7EB82DD66399D0B70BB7924319E7405AB221CC795975C81280647
+                46C7F4E908B7DA6DBC230770FFC50B8D26160FD3895DB66471C260A852960A08
+                04A7C25FBFFD48498A50B26EBBD53A9A03985D456F89BF7E9EAB4822AB8849AD
+                22042197D5623843FAF2027ADD037BC8CF3DDAB1C864C466B3114111F37A27E3
+                BF8449555A1D384AF6C1D57CEFFD3D2A5C0337318203E99D4C20A465572267EE
+                157CD82B080A3A3414FE0D2313634F4EB4B76F9B13F0A8BF9FEE07BA8E97D398
+                CA5563D04B9A72CD34C7B2AC288A3391488CF305024AF92C4A2413F0FADD1049
+                83016DA5EE5C7B6BEBD982006AE4A8AEC20AF51552C9C1621205A682F071E213
+                304A25F978E56C2FCE81A07C174EAFEB790B46D279E26E204DF5CFA32469A324
+                814B2F07079598812EAD4E97756E654250A11B8D1ABDD56A02E10D12C27580A4
+                F118C70DEE6E6A8ACACF3B1D0E1E6178445C6D21C89C8052AC18E4BF01D4BA6E
+                DFDE02127E9809594000B58E5BB7AC0C6228A4624125CAA8C4E1B0917F20CD87
+                0FECBF28F72D28209FFD01DA65A2E088D6C9BC0000000049454E44AE426082}
+              ExplicitLeft = 87
+            end
+          end
+          object rg1: TRadioGroup
+            Left = 0
+            Top = 0
+            Width = 185
+            Height = 45
+            Caption = 'Op'#231#245'es: '
+            Columns = 3
+            ItemIndex = 0
+            Items.Strings = (
+              'Todos'
+              'Nome'
+              'CPF')
+            TabOrder = 2
+          end
         end
         object dbgrd1: TDBGrid
           Left = 0
-          Top = 52
-          Width = 705
-          Height = 397
+          Top = 49
+          Width = 785
+          Height = 439
           Align = alClient
           DataSource = ds1
+          Options = [dgTitles, dgColumnResize, dgColLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
           TabOrder = 2
           TitleFont.Charset = DEFAULT_CHARSET
           TitleFont.Color = clWindowText
           TitleFont.Height = -11
           TitleFont.Name = 'Tahoma'
           TitleFont.Style = []
+          Columns = <
+            item
+              Expanded = False
+              FieldName = 'NOME'
+              Width = 277
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'ENDERECO'
+              Width = 187
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'NUMERO'
+              Width = 52
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CIDADE'
+              Width = 179
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'UF'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'BAIRRO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'COMPLEMENTO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'DATA_NASC'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CPF'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'RG'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'EMAIL'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CELULAR'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CONTATO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'TRABALHO'
+              Visible = True
+            end
+            item
+              Expanded = False
+              FieldName = 'CONJUGE'
+              Visible = True
+            end>
         end
       end
     end

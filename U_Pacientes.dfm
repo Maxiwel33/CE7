@@ -1,9 +1,10 @@
 object Frm_pacientes: TFrm_pacientes
   Left = 0
   Top = -55
+  BorderStyle = bsNone
   Caption = 'Paciente'
-  ClientHeight = 621
-  ClientWidth = 1056
+  ClientHeight = 660
+  ClientWidth = 1072
   Color = 14941646
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -26,8 +27,8 @@ object Frm_pacientes: TFrm_pacientes
   end
   object pnl2: TPanel
     Left = 0
-    Top = 576
-    Width = 1056
+    Top = 615
+    Width = 1072
     Height = 45
     Align = alBottom
     BevelOuter = bvNone
@@ -39,10 +40,10 @@ object Frm_pacientes: TFrm_pacientes
     ExplicitWidth = 1004
   end
   object pnl3: TPanel
-    Left = 922
+    Left = 938
     Top = 0
     Width = 134
-    Height = 576
+    Height = 615
     Align = alRight
     BevelOuter = bvNone
     Color = 16645595
@@ -55,8 +56,8 @@ object Frm_pacientes: TFrm_pacientes
   object pnl4: TPanel
     Left = 0
     Top = 0
-    Width = 922
-    Height = 576
+    Width = 938
+    Height = 615
     Align = alClient
     BevelOuter = bvNone
     TabOrder = 3
@@ -66,7 +67,7 @@ object Frm_pacientes: TFrm_pacientes
     object pnl1: TPanel
       Left = 0
       Top = 0
-      Width = 922
+      Width = 938
       Height = 65
       Align = alTop
       BevelOuter = bvNone
@@ -84,10 +85,10 @@ object Frm_pacientes: TFrm_pacientes
       ExplicitWidth = 742
     end
     object pnl5: TPanel
-      Left = 777
+      Left = 793
       Top = 65
       Width = 145
-      Height = 511
+      Height = 550
       Align = alRight
       BevelOuter = bvNone
       Color = 12445367
@@ -101,11 +102,12 @@ object Frm_pacientes: TFrm_pacientes
       TabOrder = 1
       ExplicitLeft = 637
       ExplicitHeight = 445
-      object pnl6: TPanel
+      object pnl_insere: TPanel
         Left = 6
         Top = 18
         Width = 131
         Height = 41
+        Cursor = crHandPoint
         Alignment = taLeftJustify
         Caption = '    Novo'
         Font.Charset = DEFAULT_CHARSET
@@ -115,6 +117,7 @@ object Frm_pacientes: TFrm_pacientes
         Font.Style = []
         ParentFont = False
         TabOrder = 0
+        OnClick = pnl_insereClick
         object img1: TImage
           Left = 87
           Top = 1
@@ -153,11 +156,12 @@ object Frm_pacientes: TFrm_pacientes
           ExplicitHeight = 41
         end
       end
-      object pnl7: TPanel
+      object pnl_altera: TPanel
         Left = 6
         Top = 74
         Width = 131
         Height = 41
+        Cursor = crHandPoint
         Alignment = taLeftJustify
         Caption = '    Alterar'
         Font.Charset = DEFAULT_CHARSET
@@ -167,6 +171,7 @@ object Frm_pacientes: TFrm_pacientes
         Font.Style = []
         ParentFont = False
         TabOrder = 1
+        OnClick = pnl_alteraClick
         object img2: TImage
           Left = 87
           Top = 1
@@ -200,11 +205,12 @@ object Frm_pacientes: TFrm_pacientes
           ExplicitHeight = 41
         end
       end
-      object pnl8: TPanel
+      object pnl_exclui: TPanel
         Left = 6
         Top = 130
         Width = 131
         Height = 41
+        Cursor = crHandPoint
         Alignment = taLeftJustify
         Caption = '    Excluir'
         Font.Charset = DEFAULT_CHARSET
@@ -214,6 +220,7 @@ object Frm_pacientes: TFrm_pacientes
         Font.Style = []
         ParentFont = False
         TabOrder = 2
+        OnClick = pnl_excluiClick
         object img3: TImage
           Left = 87
           Top = 1
@@ -259,6 +266,7 @@ object Frm_pacientes: TFrm_pacientes
         Top = 186
         Width = 131
         Height = 41
+        Cursor = crHandPoint
         Alignment = taLeftJustify
         Caption = '    Imprimir'
         Font.Charset = DEFAULT_CHARSET
@@ -299,6 +307,7 @@ object Frm_pacientes: TFrm_pacientes
         Top = 242
         Width = 131
         Height = 41
+        Cursor = crHandPoint
         Alignment = taLeftJustify
         Caption = '    Localiza'
         Font.Charset = DEFAULT_CHARSET
@@ -336,11 +345,12 @@ object Frm_pacientes: TFrm_pacientes
           ExplicitHeight = 41
         end
       end
-      object pnl11: TPanel
+      object pnl_cancela: TPanel
         Left = 6
         Top = 298
         Width = 131
         Height = 41
+        Cursor = crHandPoint
         Alignment = taLeftJustify
         Caption = '    Cancela'
         Font.Charset = DEFAULT_CHARSET
@@ -350,6 +360,7 @@ object Frm_pacientes: TFrm_pacientes
         Font.Style = []
         ParentFont = False
         TabOrder = 5
+        OnClick = pnl_cancelaClick
         object img6: TImage
           Left = 87
           Top = 1
@@ -396,11 +407,12 @@ object Frm_pacientes: TFrm_pacientes
           ExplicitHeight = 41
         end
       end
-      object pnl12: TPanel
+      object pnl_salva: TPanel
         Left = 6
         Top = 354
         Width = 131
         Height = 41
+        Cursor = crHandPoint
         Alignment = taLeftJustify
         Caption = '    Salva'
         Font.Charset = DEFAULT_CHARSET
@@ -410,6 +422,7 @@ object Frm_pacientes: TFrm_pacientes
         Font.Style = []
         ParentFont = False
         TabOrder = 6
+        OnClick = pnl_salvaClick
         object img7: TImage
           Left = 87
           Top = 1
@@ -489,12 +502,13 @@ object Frm_pacientes: TFrm_pacientes
     object pgc1: TPageControl
       Left = 0
       Top = 65
-      Width = 777
-      Height = 511
+      Width = 793
+      Height = 550
       ActivePage = ts_localiza
       Align = alClient
       TabOrder = 2
       ExplicitWidth = 713
+      ExplicitHeight = 511
       object ts_cadastro: TTabSheet
         Caption = 'cadastro'
         TabVisible = False
@@ -784,8 +798,8 @@ object Frm_pacientes: TFrm_pacientes
         ExplicitHeight = 165
         object pnl14: TPanel
           Left = 0
-          Top = 449
-          Width = 769
+          Top = 488
+          Width = 785
           Height = 52
           Align = alBottom
           BevelOuter = bvNone
@@ -798,7 +812,7 @@ object Frm_pacientes: TFrm_pacientes
             AlignWithMargins = True
             Left = 3
             Top = 3
-            Width = 763
+            Width = 779
             Height = 46
             Align = alClient
             Alignment = taCenter
@@ -819,15 +833,16 @@ object Frm_pacientes: TFrm_pacientes
         object pnl15: TPanel
           Left = 0
           Top = 0
-          Width = 769
+          Width = 785
           Height = 49
           Align = alTop
           BevelOuter = bvNone
           Color = 16645595
           ParentBackground = False
           TabOrder = 1
+          ExplicitWidth = 769
           DesignSize = (
-            769
+            785
             49)
           object lbl17: TLabel
             Left = 191
@@ -856,7 +871,7 @@ object Frm_pacientes: TFrm_pacientes
             TabOrder = 0
           end
           object pnl16: TPanel
-            Left = 650
+            Left = 666
             Top = 8
             Width = 110
             Height = 36
@@ -872,6 +887,7 @@ object Frm_pacientes: TFrm_pacientes
             ParentFont = False
             TabOrder = 1
             OnClick = pnl16Click
+            ExplicitLeft = 650
             object img9: TImage
               Left = 79
               Top = 1
@@ -932,8 +948,8 @@ object Frm_pacientes: TFrm_pacientes
         object dbgrd1: TDBGrid
           Left = 0
           Top = 49
-          Width = 769
-          Height = 400
+          Width = 785
+          Height = 439
           Align = alClient
           DataSource = ds1
           Options = [dgTitles, dgColumnResize, dgColLines, dgTabs, dgConfirmDelete, dgCancelOnExit, dgTitleClick, dgTitleHotTrack]
@@ -1029,6 +1045,8 @@ object Frm_pacientes: TFrm_pacientes
   end
   object ds1: TDataSource
     DataSet = DM.RDWCSQL_Pacientes
-    Left = 504
+    OnStateChange = ds1StateChange
+    Left = 400
+    Top = 184
   end
 end

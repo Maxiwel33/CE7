@@ -71,10 +71,20 @@ type
     pnl14: TPanel;
     pnl15: TPanel;
     dbgrd1: TDBGrid;
+    edt_busca: TEdit;
+    lbl17: TLabel;
+    pnl16: TPanel;
+    img9: TImage;
+    rg1: TRadioGroup;
+    dbtxtNOME: TDBText;
     procedure btn1Click(Sender: TObject);
     procedure pnl13Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure pnl10Click(Sender: TObject);
+    procedure pnl16Click(Sender: TObject);
+    procedure pnl6Click(Sender: TObject);
+    procedure pnl7Click(Sender: TObject);
+    procedure pnl8Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -99,6 +109,7 @@ end;
 procedure TFrm_pacientes.FormShow(Sender: TObject);
 begin
    dm.RDWCSQL_Pacientes.Open;
+   pgc1.ActivePage:=ts_cadastro;
 end;
 
 procedure TFrm_pacientes.pnl10Click(Sender: TObject);
@@ -113,6 +124,60 @@ end;
 procedure TFrm_pacientes.pnl13Click(Sender: TObject);
 begin
 Close;
+end;
+
+procedure TFrm_pacientes.pnl16Click(Sender: TObject);
+begin
+     with dm.RDWCSQL_Pacientes do
+     begin
+     if rg1.ItemIndex =0  then
+    begin
+       Close;
+       SQL.Clear;
+       sql.Add('select * from paciente');
+       Open;
+     end
+  else
+    begin
+      with dm.RDWCSQL_Pacientes do
+if rg1.ItemIndex =1  then
+    begin
+       Close;
+       SQL.Clear;
+       sql.Add('select * from paciente where nome like '+UpperCase(QuotedStr(edt_busca.Text+'%')));
+       Open;
+   end else
+    begin
+      with dm.RDWCSQL_Pacientes do
+if rg1.ItemIndex =2  then
+    begin
+       Close;
+       SQL.Clear;
+       sql.Add('select * from paciente where cpf like '+UpperCase(QuotedStr(edt_busca.Text+'%')));
+       Open;
+    end;
+    end;
+    end;
+     end;
+end;
+
+procedure TFrm_pacientes.pnl6Click(Sender: TObject);
+begin
+   DM.RDWCSQL_Pacientes.Insert;
+   dbedtNOME.SetFocus;
+end;
+
+procedure TFrm_pacientes.pnl7Click(Sender: TObject);
+begin
+    dm.RDWCSQL_Pacientes.Edit;
+    dbedtNOME.SetFocus;
+end;
+
+procedure TFrm_pacientes.pnl8Click(Sender: TObject);
+begin
+Application.MessageBox('Deseja realmente apagar o registro corrente?',
+  'Excluir Registro', MB_OKCANCEL + MB_ICONQUESTION);
+  DM.RDWCSQL_Pacientes.Delete;
 end;
 
 end.
